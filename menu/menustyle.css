@@ -1,0 +1,61 @@
+/*html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+
+	}*/
+.med{
+    width: 255px;
+    height: 377px;
+
+
+border-radius: 25px;
+
+background-position: center center;
+background-image: url(https://static1.s123-cdn-static-a.com/uploads/7459990/800_63dbc59c50b68.jpg);
+
+}
+.medi
+{
+
+    text-align: center;
+margin-bottom: 40px;
+    width: 280px;
+
+
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+    
+}
+
+#top{
+  display: flex;
+  justify-content: center;
+     margin-bottom: 20px;
+    text-align: center;
+}
+table
+{
+  border-spacing: 30px;
+}
+.mini{
+  display: flex;
+  justify-content: space-between;
+}
+.center
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.card
+{
+  margin: 45px;
+}
