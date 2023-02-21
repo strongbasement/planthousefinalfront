@@ -1,0 +1,45 @@
+#abouth.hq{
+    /*font-family: 'Julee', cursive;*/
+    text-align: center;
+    color:darkgrey;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+}
+#aboutflex.flex
+{
+    display: flex;
+    justify-content: center;
+     flex-wrap: wrap;
+     padding: 20px;
+     font-family: 'Dosis', sans-serif;
+     font-size: 1.5rem;
+     font-weight: bold;
+     
+}
+#love.span
+{
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+#about2flex.flex2
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+   
+}
+#fir.card
+{
+    margin-bottom: 20px;
+}
+#fir2.card
+{
+    margin-bottom: 20px;
+}
+#fir3.card
+{
+    margin-bottom: 20px;
+}
