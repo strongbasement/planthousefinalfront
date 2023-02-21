@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+  #coni3
+  {
+    text-align: center;
+  }
+  #coni2
+{
+    font-family: 'Black Ops One', cursive;
+    text-align: center;
+    font-family: 'Rubik Gemstones', cursive;
+    
+    font-size: 1.9rem;
+}
+  .divf
+{
+    display: flex;
+    justify-content: center;
+    background-image: url('plants.gif');
+    
+}
+  .social
+{
+    
+   /* background-image: url('plantslink.gif');
+background-repeat: no-repeat;
+background-size: cover;*/
+width: 300px;
+height: 300px;
+border-radius: 30%;
+
+}
+  .flexi
+{
+    
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+
+}
+.socimages
+{
+    width: 80px;
+    height: 80px;
+    margin-top: 60px;
+    
+}
+  #plant
+{
+width: 200px;
+    height: 90px;
+    
+}
+  #butt{
+    margin-top: 30px;
+    font-size:1rem ;
+    background-color: aqua;
+    font-family: 'Press Start 2P', cursive;
+  }
+    .flexer
+    {
+        display: flex;
+        justify-content: center;
+    }
+    #coni
+    {
+        margin-left: 20px;
+        margin-top: 40px;
+        text-align: center;
+        font-family: 'Press Start 2P', cursive;
+        color: green;
+        font-size: 1.4rem;
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .myform
+    {
+        
+        
+        margin: auto;
+        
+
+    }
+    #myform input ,textarea
+    {
+        width: 50%;
+        padding: 10px;
+    }
+    label
+    {
+        display: block;
+    }
+    input,textarea
+    {
+        margin-bottom: 30px;
+        font-family: 'Press Start 2P', cursive;
+
+    }
+    @media (max-width:760px)
+    {
+        #myform input ,textarea
+    {
+        width: 100%;
+        padding: 10px;
+    }
+    .social
+{
+    
+    /*background-image: url('plantslink.gif');
+background-repeat: no-repeat;
+background-size: cover;*/
+width: 300px;
+height: 300px;
+
+}
+    }
+</style>
+<body>
+    <div class="myform">
+
+        <form id="myform" name="submit-to-google-sheet">
+           
+            <h1 id="coni">CONTACT US <img src="plant.gif" alt="" id="plant"></h1>
+            
+            
+            <div class="flexer">
+                
+                <input type="text" id="name" name="name" placeholder="Enter your name here">
+            
+            </div>
+            <div class="flexer">
+                
+                <input type="email" id="email" name="mail" placeholder="Enter your email here">
+           
+            </div>
+            <div class="flexer">
+                
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your Mobile here">
+           
+            </div>
+            <div class="flexer">
+                
+                <textarea id="message" cols="30" rows="5" name="message" placeholder="type your message here"></textarea>
+            
+            </div>
+            <div class="flexer"><input type="submit" value="Send" id="butt"></div>
+            
+        </form>
+    </div>
+    <h1 id="error"></h1>
+    <div class="divf"><div class="social">
+    <h2 id="coni2">social  Links</h2>
+        <div class="flexi"><a href="mailto:planthouse47@gmail.com"><img src="gmail.png" alt="" class="socimages"></a>
+        <a href="https://instagram.com/plant_house47?igshid=ZDdkNTZiNTM="><img src="instagram.png" alt="" class="socimages"></a>
+       <a href="https://youtube.com/shorts/QR9vN8yYCS8?feature=share"> <img src="youtube.png" alt="" class="socimages"></div></a>
+           </div></div>
+   <div class="footer">
+    <h4 id="coni3">Copyright © 2023 All rights reserved - planthouse
+      <br>  Powered By GraceCode</h4>
+   </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyTmWsOYS9NiujUa25m8wwoPbYWCqEcUnA_lR-hOEebOeoHE_zeOpJacL_QU--C8l6F/exec'
+        const form = document.forms['submit-to-google-sheet'];
+      const myname=document.querySelector('#name');
+      const mymail=document.querySelector('#email');
+      const err=document.querySelector('#error');
+        form.addEventListener('submit', e => {
+            let mess='';
+            if(myname.value.length<3)
+            {
+              mess+='name must have more than three characters';
+                alert(mess);
+            } 
+            else{
+                document.querySelector('#butt').setAttribute("disabled", "disabled");
+                e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            alert("Thank you for your submission");
+            document.querySelector('#butt').value="Done";
+            }
+        
+        });
+      </script>
+</body>
+</html>
