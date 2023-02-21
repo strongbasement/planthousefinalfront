@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+.card-texts
+{
+  
+  font-family: 'Racing Sans One', cursive;
+  
+}
+.card-titles
+{
+  font-family: 'Fredericka the Great', cursive;
+  
+
+}
+
+h1
+{
+ padding-top: 45px;
+  text-align: center;
+}
+#news.flex
+{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+ /* background-color: orange;*/
+
+}
+.cards
+{
+  margin-bottom: 40px;
+}
+.imgs
+{
+  height: 400px;
+}
+#more,#more1,#more2
+{
+  text-decoration: underline;
+  color: grey;
+}
+#lova
+{
+  font-family: 'Fredericka the Great', cursive;
+  margin-bottom: 45px;
+  
+
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+
+	}
+  /*#lova
+  {
+    
+  }*/
